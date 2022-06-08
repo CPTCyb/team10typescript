@@ -23,3 +23,50 @@ if (oszto == 2) {
 else {
     document.write("<br>A ".concat(vizsgaltSzam, " NEM pr\u00EDm"));
 }
+//Víz halmazállapot
+var fok = Math.round(Math.random() * 200) - 50;
+if (fok < 0) {
+    document.write("<br>A v\u00EDz halmaz\u00E1llapota ".concat(fok, "C\u00B0 eset\u00E9n szil\u00E1rd(j\u00E9g)"));
+}
+else if (fok > 100) {
+    document.write("<br>A v\u00EDz halmaz\u00E1llapota ".concat(fok, "C\u00B0 eset\u00E9n l\u00E9gnem\u0171(g\u0151z)"));
+}
+else {
+    document.write("<br>A v\u00EDz halmaz\u00E1llapota ".concat(fok, "C\u00B0 eset\u00E9n foly\u00E9kony(v\u00EDz)"));
+}
+//Koordináta meghatározó
+var x = Math.round(Math.random() * 2) - 1;
+var y = Math.round(Math.random() * 2) - 1;
+if (x > 0 && y > 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az els\u0151 s\u00EDknegyedben van."));
+}
+else if (x < 0 && y > 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az m\u00E1sodik s\u00EDknegyedben van."));
+}
+else if (x < 0 && y < 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az harmadik s\u00EDknegyedben van."));
+}
+else if (x > 0 && y < 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az negyedik s\u00EDknegyedben van."));
+}
+else if (x == 0 && y == 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az orig\u00F3ban van."));
+}
+else if (x == 0) {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az y tengelyen van."));
+}
+else {
+    document.write("<br>A ".concat(x, ", ").concat(y, " pont az x tengelyen van."));
+}
+//Számtani sorozat
+//kezdőérték (0-100)
+//kvóciens(1-10)
+//mennyiség (2-20)
+var kezdoErtek = Math.round(Math.random() * 100);
+var kvociens = Math.round(Math.random() * 9) + 1;
+var mennyiseg = Math.round(Math.random() * 18) + 2;
+document.write("<br>A generált számtani sorozat:");
+for (var i = 0; i < mennyiseg; i++) {
+    document.write(kezdoErtek + ",");
+    kezdoErtek += kvociens;
+}
